@@ -1,0 +1,26 @@
+{% extends 'all_page/base.html' %}
+
+{% block head_content %}
+    <style>
+        iframe, video {
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            height: 750px;
+            min-height: 180px;
+            max-height: 1080px;
+            min-width: 320px;
+            max-width: 1920px;
+        }
+    </style>
+    <title>Video Detail</title>
+{% endblock head_content %}
+
+{% block main_content %}
+
+<h1>{{ video.title }} </h1>
+<iframe src="https://www.youtube.com/embed/{{ video.youtube_vid }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+
+</iframe>
+
+{% endblock main_content %}

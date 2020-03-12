@@ -1,0 +1,14 @@
+/.idea/*
+/nbproject/*
+__pycache__/
+__pypackages__/
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Django stuff:
+*.log
+

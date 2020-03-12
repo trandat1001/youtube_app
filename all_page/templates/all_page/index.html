@@ -1,0 +1,42 @@
+{% extends 'all_page/base.html' %}
+
+{% block head_content %}
+    <style>
+    nav.button-links {
+        position: static;
+        text-align: left;
+        padding-left: 0px;
+    }
+    nav.button-links h2 {
+        position: static;
+        display: inline-block;
+        color: black;
+    }
+    nav.button-links a {
+        display: inline-block;
+        background-color: #00BFFF;
+        color: #FFF;
+        border: solid 1px gray;
+        text-align: center;
+        padding: 10px 10px;
+        line-height: 1.5;
+        border-radius: 10px;
+    }
+    nav.button-links a:hover {
+        background-color: #00fffc;
+        color: navy;
+    }
+    </style>
+    <title>Video List</title>
+{% endblock head_content %}
+
+{% block main_content %}
+<nav class="button-links">
+    <h2>Video Links</h2>
+    <a class="btn btn-primary" role="button" href="{% url 'video-thumbs' 1 %}">HTML / CSS</a>
+    <a class="btn btn-primary" role="button" href="{% url 'video-thumbs' 2 %}">Javascript</a>
+    <a class="btn btn-primary" role="button" href="{% url 'video-thumbs' 3 %}">Python</a>
+    <a class="btn btn-primary" role="button" href="{% url 'video-thumbs' 4 %}">Django</a>
+    <a class="btn btn-primary" role="button" href="{% url 'video-list' %}">Video List</a>
+</nav>
+{% endblock main_content %}

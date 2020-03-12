@@ -1,0 +1,12 @@
+{% extends 'all_page/base.html' %}
+
+{% block main_content %}
+<form method="POST">
+    {% csrf_token %}
+    <h1>Delete Video</h1>
+    <p>Are you sure you want to delete {{ video.title }}</p>
+    <button type="submit" class="btn btn-primary">Yes, Delete</button>
+    <a class="btn btn-warning" role="button" href="{% url 'video-list' %}">Cancel</a>
+</form>
+
+{% endblock main_content %}

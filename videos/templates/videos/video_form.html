@@ -1,0 +1,49 @@
+{% extends 'all_page/base.html' %}
+{% load crispy_forms_tags %}
+{% block head_content %}
+    <style>
+        span.asteriskField {
+            display:none;
+        }
+        div.form-group label {
+            margin: 0px;
+        }
+        div#the-forms {
+            width: 98%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #id_description {
+            height: 120px;
+        }
+        #id_category_id, #id_skill_level_id {
+            width:180px;
+        }
+    </style>
+    <title>Video Create</title>
+{% endblock head_content %}
+
+{% block main_content %}
+<div id="the-forms">
+    {% if form.instance.pk %}
+        <h1>Edit a Video</h1>
+    {% else %}
+        <h1>Add new Video</h1>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <p style="text-align: center">
+            {% if form.instance.id %}
+                <input type="submit" class="btn btn-primary" value="Edit">
+                <a class="btn btn-danger" role="button" href="{% url 'video-delete' form.instance.id %}">Delete</a>
+            {% else %}
+            <input type="submit" value="Create">&nbsp; &nbsp;
+            <input type="reset" value="Reset">
+            {% endif %}
+        </p>
+    </form>
+</div>
+
+{% endblock main_content %}
