@@ -129,3 +129,18 @@ footer a:hover, footer a:active{
     color:white;
     text-decoration:none;
 }
+
+div.header_menu {
+    float: right;
+
+}
+div.header_menu a:link, div.header_menu a:visited {
+    color: white;
+    text-decoration: none;
+}
+div.header_menu a {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: 1.25em;
+    line-height: 100%;
+}

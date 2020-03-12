@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'view_youtube.urls'
+ROOT_URLCONF = 'youtube_app.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'view_youtube.wsgi.application'
+WSGI_APPLICATION = 'youtube_app.wsgi.application'
 
 
 # Database
